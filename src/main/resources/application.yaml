@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /
+  port: 9000
+spring:
+  application:
+    name: fulltextsearch
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.11:3306/permit_smart_aux_system?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: admin
+    password: admin
+  elasticsearch:
+    rest:
+      uris: http://127.0.0.1:9200
+      username: elastic
+      password: elastic
+      connection-timeout: 1
+      read-timeout: 3
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
